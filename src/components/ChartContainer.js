@@ -9,7 +9,6 @@ import PropTypes from "prop-types";
 import { selectNodeService } from "./service";
 import JSONDigger from "json-digger";
 import ChartNode from "./ChartNode";
-import "./ChartContainer.module.css";
 
 const propTypes = {
   datasource: PropTypes.object.isRequired,

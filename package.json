@@ -1,5 +1,5 @@
 {
-  "name": "@dabeng/react-orgchart",
+  "name": "@naicoits/nextjs-orgchart",
   "version": "1.0.3",
   "main": "./dist/ChartContainer.js",
   "files": [
@@ -8,7 +8,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dabeng/react-orgchart.git"
+    "url": "git+https://github.com/sreejish56/naicoits-nextjs-orgchart.git"
   },
   "keywords": [
     "react",
@@ -23,9 +23,8 @@
   "author": "dabeng <dabeng413@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dabeng/react-orgchart/issues"
+    "url": "https://github.com/sreejish56/naicoits-nextjs-orgchart/issues"
   },
-  "homepage": "https://github.com/dabeng/react-orgchart#readme",
   "babel": {
     "presets": [
       "@babel/preset-env",

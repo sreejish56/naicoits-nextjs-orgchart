@@ -9,6 +9,8 @@ import DragDropChart from "./drag-drop-chart/drag-drop-chart";
 import EditChart from "./edit-chart/edit-chart";
 import EditNode from "./edit-node/edit-node";
 import "./App.css";
+import "./components/ChartContainer.css";
+import "./components/ChartNode.css";
 
 const App = () => {
   return (

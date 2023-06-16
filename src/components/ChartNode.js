@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import { dragNodeService, selectNodeService } from "./service";
-import "./ChartNode.module.css";
 
 const propTypes = {
   datasource: PropTypes.object,
