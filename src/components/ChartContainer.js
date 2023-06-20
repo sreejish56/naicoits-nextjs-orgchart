@@ -19,6 +19,7 @@ const propTypes = {
   containerClass: PropTypes.string,
   chartClass: PropTypes.string,
   NodeTemplate: PropTypes.elementType,
+  NodeProperties: PropTypes.object,
   draggable: PropTypes.bool,
   collapsible: PropTypes.bool,
   multipleSelect: PropTypes.bool,
@@ -49,6 +50,7 @@ const ChartContainer = forwardRef(
       containerClass,
       chartClass,
       NodeTemplate,
+      NodeProperties,
       draggable,
       collapsible,
       multipleSelect,
@@ -314,6 +316,7 @@ const ChartContainer = forwardRef(
             <ChartNode
               datasource={attachRel(ds, "00")}
               NodeTemplate={NodeTemplate}
+              NodeProperties={NodeProperties}
               draggable={draggable}
               collapsible={collapsible}
               multipleSelect={multipleSelect}

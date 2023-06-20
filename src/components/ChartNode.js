@@ -5,6 +5,7 @@ import { dragNodeService, selectNodeService } from "./service";
 const propTypes = {
   datasource: PropTypes.object,
   NodeTemplate: PropTypes.elementType,
+  NodeProperties: PropTypes.object,
   draggable: PropTypes.bool,
   collapsible: PropTypes.bool,
   multipleSelect: PropTypes.bool,
@@ -21,6 +22,7 @@ const defaultProps = {
 const ChartNode = ({
   datasource,
   NodeTemplate,
+  NodeProperties,
   draggable,
   collapsible,
   multipleSelect,
@@ -250,7 +252,7 @@ const ChartNode = ({
         onMouseLeave={removeArrows}
       >
         {NodeTemplate ? (
-          <NodeTemplate nodeData={datasource} />
+          <NodeTemplate nodeData={datasource} {...NodeProperties} />
         ) : (
           <>
             <div className="oc-heading">
@@ -324,6 +326,7 @@ const ChartNode = ({
             <ChartNode
               datasource={node}
               NodeTemplate={NodeTemplate}
+              NodeProperties={NodeProperties}
               id={node.id}
               key={node.id}
               draggable={draggable}

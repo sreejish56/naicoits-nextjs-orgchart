@@ -34,6 +34,7 @@ var propTypes = {
   containerClass: _propTypes.default.string,
   chartClass: _propTypes.default.string,
   NodeTemplate: _propTypes.default.elementType,
+  NodeProperties: _propTypes.default.object,
   draggable: _propTypes.default.bool,
   collapsible: _propTypes.default.bool,
   multipleSelect: _propTypes.default.bool,
@@ -60,6 +61,7 @@ var ChartContainer = (0, _react.forwardRef)(function (_ref, ref) {
     containerClass = _ref.containerClass,
     chartClass = _ref.chartClass,
     NodeTemplate = _ref.NodeTemplate,
+    NodeProperties = _ref.NodeProperties,
     draggable = _ref.draggable,
     collapsible = _ref.collapsible,
     multipleSelect = _ref.multipleSelect,
@@ -337,6 +339,7 @@ var ChartContainer = (0, _react.forwardRef)(function (_ref, ref) {
   }, /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement(_ChartNode.default, {
     datasource: attachRel(ds, "00"),
     NodeTemplate: NodeTemplate,
+    NodeProperties: NodeProperties,
     draggable: draggable,
     collapsible: collapsible,
     multipleSelect: multipleSelect,
