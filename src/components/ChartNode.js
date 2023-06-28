@@ -252,7 +252,7 @@ const ChartNode = ({
         onMouseLeave={removeArrows}
       >
         {NodeTemplate ? (
-          <NodeTemplate nodeData={datasource} {...NodeProperties} />
+          <NodeTemplate nodeData={datasource} NodeProperties={NodeProperties} />
         ) : (
           <>
             <div className="oc-heading">

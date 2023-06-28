@@ -72,12 +72,18 @@ const ChartContainer = forwardRef(
     const [dataURL, setDataURL] = useState("");
     const [download, setDownload] = useState("");
 
-    const attachRel = (data, flags) => {
+    const attachRel = (data, flags, path = [], nodeNumber = 0) => {
+      data.path = [...path, nodeNumber];
       data.relationship =
         flags + (data.children && data.children.length > 0 ? 1 : 0);
       if (data.children) {
-        data.children.forEach(function (item) {
-          attachRel(item, "1" + (data.children.length > 1 ? 1 : 0));
+        data.children.forEach(function (item,index) {
+          attachRel(
+            item,
+            "1" + (data.children.length > 1 ? 1 : 0),
+            data.path,
+            index
+          );
         });
       }
       return data;
@@ -296,6 +302,7 @@ const ChartContainer = forwardRef(
           });
       },
     }));
+    console.log('ds',ds)
 
     return (
       <div
